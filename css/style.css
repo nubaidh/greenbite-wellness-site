@@ -1,0 +1,578 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2ecc71;
+  color: white;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.hero {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/hero.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.daily-tip {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background: #27ae60;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+footer form {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #2ecc71;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+  }
+  .nav-links li {
+    margin: 10px 0;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Recipes Page */
+.recipe-search {
+  text-align: center;
+  margin: 20px;
+}
+
+.recipe-search input,
+.recipe-search select {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.recipes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.recipe-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 700px;
+  overflow-y: auto;
+  max-height: 90%;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* === Recipes Page === */
+#recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.recipe-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.recipe-card h3 {
+  margin-bottom: 8px;
+  color: #2e7d32;
+}
+
+.recipe-card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.recipe-card .nutrition {
+  margin-top: 10px;
+  font-size: 13px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.macro {
+  margin: 10px 0;
+}
+
+.progress-bar {
+  background: #eee;
+  border-radius: 10px;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  height: 100%;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 1s ease;
+}
+
+/* Different colors for each macro */
+#carbsBar { background-color: #4caf50; }
+#proteinBar { background-color: #2196f3; }
+#fatBar { background-color: #ff9800; }
+
+/* ====== Calculator Page ====== */
+.calculator-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f5f9f5;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.calculator-container h2 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.calculator-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.calculator-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.calculator-container input,
+.calculator-container select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+.calculator-container input:focus,
+.calculator-container select:focus {
+  border-color: #2ecc71;
+  outline: none;
+}
+
+.calculator-container button {
+  grid-column: 1 / -1;
+  padding: 12px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.calculator-container button:hover {
+  background: #27ae60;
+  transform: scale(1.05);
+}
+
+/* Results Section */
+#results {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.result-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+}
+
+.result-card h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.result-card p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Progress bars for macros */
+.macro-bar {
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 5px 0 15px 0;
+}
+
+.macro-fill {
+  height: 100%;
+  width: 0%;
+  text-align: right;
+  padding-right: 5px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  line-height: 20px;
+}
+
+#carbs-fill { background: #3498db; }
+#protein-fill { background: #e67e22; }
+#fat-fill { background: #e74c3c; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calculator-container form {
+    grid-template-columns: 1fr;
+  }
+  #results {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ====== Workouts Page ====== */
+.countdown-bar {
+  width: 100%;
+  height: 15px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px 0 15px 0;
+}
+
+.fill-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #2ecc71;
+  border-radius: 8px;
+  transition: width 0.2s linear;
+}
+
+.result-card button {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.result-card button:hover {
+  transform: scale(1.05);
+}
+
+.result-card button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Mindfulness Page */
+.breathing-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+#breathingCircle {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: #2ecc71;
+  animation: breathe 4s ease-in-out infinite;
+}
+
+#breathingText {
+  font-size: 20px;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* Breathing animation */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+.timer-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.timer-container input {
+  padding: 8px;
+  width: 60px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+}
+
+.timer-container button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #2ecc71;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.timer-container button:hover {
+  background: #27ae60;
+}
+
+.sound-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.sound-btn {
+  margin: 5px;
+  padding: 8px 15px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sound-btn:hover {
+  background: #2980b9;
+}
+
+.sessions-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sessions-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sessions-container li {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.timer-circle-container {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.timer-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid #2ecc71;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+#progressCircle {
+  transform-origin: 100px 100px; /* center of SVG */
+  transition: transform 4s ease-in-out; /* smooth pulsing */
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn, .btn-small {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2ecc71;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover, .btn-small:hover {
+  background: #27ae60;
+}
+
+.features {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.feature-card {
+  background: #f5f9f5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

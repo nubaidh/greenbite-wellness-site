@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite Workout Generator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">GreenBite</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workouts.html" class="active">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- Workout Generator -->
+  <section class="calculator-container">
+    <h2>Workout Generator</h2>
+    <form id="workoutForm">
+      <label for="bodyPart">Select Body Part:</label>
+      <select id="bodyPart" required>
+        <option value="">--Choose--</option>
+        <option value="full-body">Full Body</option>
+        <option value="arms">Arms</option>
+        <option value="legs">Legs</option>
+        <option value="core">Core</option>
+        <option value="chest">Chest</option>
+        <option value="back">Back</option>
+        <option value="shoulders">Shoulders</option>
+      </select>
+
+      <label for="equipment">Select Equipment:</label>
+      <select id="equipment" required>
+        <option value="">--Choose--</option>
+        <option value="none">None</option>
+        <option value="dumbbells">Dumbbells</option>
+        <option value="resistance-band">Resistance Band</option>
+        <option value="kettlebell">Kettlebell</option>
+        <option value="rope">Jump Rope</option>
+        <option value="treadmill">Treadmill</option>
+        <option value="bike">Stationary Bike</option>
+      </select>
+
+      <button type="submit">Generate Workout</button>
+    </form>
+
+    <!-- Generated Workout -->
+    <div id="workoutResults" style="margin-top: 30px;"></div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="js/workouts.js"></script>
+</body>
+</html>

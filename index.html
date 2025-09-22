@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite Wellness</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">GreenBite</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 id="heroText">Eat Well, Live Well</h1>
+    <p>Your journey to a healthier lifestyle starts here</p>
+    <div class="hero-buttons">
+      <a href="recipes.html" class="btn">Explore Recipes</a>
+      <a href="calculator.html" class="btn">Calorie Calculator</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Discover GreenBite</h2>
+    <div class="feature-cards">
+      <div class="feature-card">
+        <h3>Healthy Recipes</h3>
+        <p>Delicious meals tailored for your wellness journey.</p>
+        <a href="recipes.html" class="btn-small">Explore</a>
+      </div>
+      <div class="feature-card">
+        <h3>Calorie Calculator</h3>
+        <p>Track your daily intake and nutrition effortlessly.</p>
+        <a href="calculator.html" class="btn-small">Calculate</a>
+      </div>
+      <div class="feature-card">
+        <h3>Workout Generator</h3>
+        <p>Custom workouts for every body part and fitness level.</p>
+        <a href="workouts.html" class="btn-small">Start</a>
+      </div>
+      <div class="feature-card">
+        <h3>Mindfulness</h3>
+        <p>Guided sessions to relax your mind and reduce stress.</p>
+        <a href="mindfulness.html" class="btn-small">Try</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Tip -->
+  <section class="daily-tip">
+    <h2>Health Tip of the Day</h2>
+    <p id="tipText"></p>
+  </section>
+
+  <!-- Newsletter -->
+  <footer>
+    <form id="newsletterForm">
+      <label for="email">Subscribe to our newsletter:</label>
+      <input type="email" id="email" required placeholder="Enter your email">
+      <button type="submit">Subscribe</button>
+    </form>
+    <p>&copy; 2025 GreenBite Wellness</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite Recipes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">GreenBite</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html" class="active">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- Search & Filter -->
+  <section class="recipe-search">
+    <input type="text" id="search-bar" placeholder="Search recipes...">
+    <select id="category-filter">
+      <option value="all">All Categories</option>
+      <option value="breakfast">Breakfast</option>
+      <option value="lunch">Lunch</option>
+      <option value="dinner">Dinner</option>
+      <option value="snack">Snack</option>
+      <option value="smoothie">Smoothie</option>
+    </select>
+  </section>
+
+  <!-- Recipes Grid (dynamic) -->
+  <section class="recipes-container" id="recipe-list"></section>
+
+  <!-- Modal -->
+  <div class="modal" id="recipeModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" alt="Recipe Image">
+      
+      <h3>Ingredients</h3>
+      <ul id="modalIngredients"></ul>
+      
+      <h3>Steps</h3>
+      <ol id="modalSteps"></ol>
+      
+      <h3>Nutrition Info</h3>
+      <table class="nutrition-table">
+        <thead>
+          <tr>
+            <th>Calories</th>
+            <th>Carbs</th>
+            <th>Protein</th>
+            <th>Fat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="modalCalories"></td>
+            <td id="modalCarbs"></td>
+            <td id="modalProtein"></td>
+            <td id="modalFat"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/recipes.js"></script>
+</body>
+</html>

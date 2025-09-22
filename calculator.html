@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite Calorie & Nutrition Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">GreenBite</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html" class="active">Calculator</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="calculator-section">
+      <h2>Calorie & Nutrition Calculator</h2>
+      <form id="calculatorForm">
+        <label>Age (years): <input type="number" id="age" required min="1"></label>
+        <label>Gender:
+          <select id="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </label>
+        <label>Height (cm): <input type="number" id="height" required min="1"></label>
+        <label>Weight (kg): <input type="number" id="weight" required min="1"></label>
+        <label>Activity Level:
+          <select id="activity" required>
+            <option value="">Select</option>
+            <option value="1.2">Sedentary</option>
+            <option value="1.375">Lightly active</option>
+            <option value="1.55">Moderately active</option>
+            <option value="1.725">Very active</option>
+            <option value="1.9">Super active</option>
+          </select>
+        </label>
+        <button type="submit">Calculate</button>
+      </form>
+
+      <div id="results" style="display:none;">
+        <h3>Results</h3>
+        <p><strong>BMR:</strong> <span id="bmrResult"></span> kcal</p>
+        <p><strong>TDEE:</strong> <span id="tdeeResult"></span> kcal</p>
+
+        <div class="macro">
+          <label>Carbs: <span id="carbsResult"></span> g</label>
+          <div class="progress-bar"><div id="carbsBar"></div></div>
+        </div>
+
+        <div class="macro">
+          <label>Protein: <span id="proteinResult"></span> g</label>
+          <div class="progress-bar"><div id="proteinBar"></div></div>
+        </div>
+
+        <div class="macro">
+          <label>Fat: <span id="fatResult"></span> g</label>
+          <div class="progress-bar"><div id="fatBar"></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/calculator.js"></script>
+</body>
+</html>
