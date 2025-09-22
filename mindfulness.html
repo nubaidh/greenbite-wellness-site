@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation -->
   <header>
     <nav class="navbar">
       <div class="logo">GreenBite</div>
@@ -23,11 +22,8 @@
     </nav>
   </header>
 
-  <!-- Mindfulness Section -->
   <section class="calculator-container">
     <h2>Mindfulness & Breathing</h2>
-
-    <!-- Combined Breathing + Timer Circle -->
     <div class="breathing-container">
       <svg width="200" height="200">
         <circle cx="100" cy="100" r="80" stroke="#2ecc71" stroke-width="8" fill="transparent"/>
@@ -37,7 +33,6 @@
       <p id="breathingText">Press Start</p>
     </div>
 
-    <!-- Timer -->
     <div class="timer-container">
       <label for="sessionTime">Session Length (minutes):</label>
       <input type="number" id="sessionTime" min="1" max="60" value="5">
@@ -48,7 +43,6 @@
       <button id="pauseSession" disabled>Pause</button>
     </div>
 
-    <!-- Ambient Sound -->
     <div class="sound-container">
       <h3>Ambient Sounds</h3>
       <button class="sound-btn" data-sound="rain">Rain</button>
@@ -56,7 +50,6 @@
       <button class="sound-btn" data-sound="forest">Forest</button>
     </div>
 
-    <!-- Completed Sessions -->
     <div class="sessions-container">
       <h3>Completed Sessions: <span id="completedSessions">0</span></h3>
       <ul id="sessionList"></ul>
