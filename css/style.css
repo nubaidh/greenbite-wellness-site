@@ -1,9 +1,11 @@
+/* General page styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -33,6 +35,7 @@ body {
   font-size: 24px;
 }
 
+/* Hero section */
 .hero {
   height: 300px;
   display: flex;
@@ -43,11 +46,13 @@ body {
   text-align: center;
 }
 
+/* Daily tip section */
 .daily-tip {
   padding: 20px;
   text-align: center;
 }
 
+/* Footer */
 footer {
   background: #27ae60;
   color: white;
@@ -59,6 +64,7 @@ footer form {
   margin-bottom: 10px;
 }
 
+/* Responsive navbar */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -77,7 +83,7 @@ footer form {
   }
 }
 
-/* Recipes Page */
+/* Recipes page */
 .recipe-search {
   text-align: center;
   margin: 20px;
@@ -118,7 +124,7 @@ footer form {
   border-radius: 10px;
 }
 
-/* Modal */
+/* Modal popup for recipes */
 .modal {
   display: none;
   position: fixed;
@@ -151,7 +157,7 @@ footer form {
   margin-bottom: 15px;
 }
 
-/* === Recipes Page === */
+/* Recipe cards layout */
 #recipe-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -214,12 +220,11 @@ footer form {
   transition: width 1s ease;
 }
 
-/* Different colors for each macro */
 #carbsBar { background-color: #4caf50; }
 #proteinBar { background-color: #2196f3; }
 #fatBar { background-color: #ff9800; }
 
-/* ====== Calculator Page ====== */
+/* Calculator page */
 .calculator-container {
   max-width: 800px;
   margin: 40px auto;
@@ -281,7 +286,7 @@ footer form {
   transform: scale(1.05);
 }
 
-/* Results Section */
+/* Results display */
 #results {
   margin-top: 30px;
   display: grid;
@@ -312,7 +317,7 @@ footer form {
   margin: 5px 0;
 }
 
-/* Progress bars for macros */
+/* Macro progress bars */
 .macro-bar {
   height: 20px;
   background: #e0e0e0;
@@ -336,7 +341,7 @@ footer form {
 #protein-fill { background: #e67e22; }
 #fat-fill { background: #e74c3c; }
 
-/* Responsive Design */
+/* Responsive form and results */
 @media (max-width: 768px) {
   .calculator-container form {
     grid-template-columns: 1fr;
@@ -346,7 +351,7 @@ footer form {
   }
 }
 
-/* ====== Workouts Page ====== */
+/* Workouts page */
 .countdown-bar {
   width: 100%;
   height: 15px;
@@ -383,7 +388,7 @@ footer form {
   cursor: not-allowed;
 }
 
-/* Mindfulness Page */
+/* Mindfulness page */
 .breathing-container {
   text-align: center;
   margin: 30px 0;
@@ -404,7 +409,6 @@ footer form {
   font-weight: bold;
 }
 
-/* Breathing animation */
 @keyframes breathe {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.3); }
@@ -506,10 +510,11 @@ footer form {
 }
 
 #progressCircle {
-  transform-origin: 100px 100px; /* center of SVG */
-  transition: transform 4s ease-in-out; /* smooth pulsing */
+  transform-origin: 100px 100px;
+  transition: transform 4s ease-in-out;
 }
 
+/* Hero text + buttons */
 .hero p {
   margin-top: 10px;
   font-size: 18px;
@@ -535,6 +540,7 @@ footer form {
   background: #27ae60;
 }
 
+/* Features section on homepage */
 .features {
   padding: 40px 20px;
   text-align: center;
@@ -559,6 +565,7 @@ footer form {
   transform: translateY(-5px);
 }
 
+/* Simple fade animations */
 .fade-in {
   animation: fadeIn 0.5s forwards;
 }
